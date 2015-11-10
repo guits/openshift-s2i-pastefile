@@ -1,5 +1,5 @@
 
-IMAGE_NAME = lighttpd-centos7
+IMAGE_NAME = openshift-s2i-uwsgi-pastefile
 
 build:
 	docker build -t $(IMAGE_NAME) .

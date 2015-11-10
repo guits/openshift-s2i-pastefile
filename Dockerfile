@@ -15,14 +15,8 @@ RUN yum install -y python python-devel python-pip && yum clean all -y && pip ins
 COPY ./.s2i/bin/ /usr/local/s2i
 COPY ./etc/pastefile.cfg /etc/
 
-# Drop the root user and make the content of /opt/openshift owned by user 1001
-RUN mkdir /tmp/src && mkdir /opt/openshift && chown -R 1001:1001 /opt/openshift /tmp/src
+RUN mkdir /tmp/src && mkdir /opt/openshift && chmod -R 777 /opt/openshift /tmp/src
 
-# Set the default user for the image, the user itself was created in the base image
 USER 1001
 
-# Specify the ports the final image will expose
 EXPOSE 9000
-
-# Set the default CMD to print the usage of the image, if somebody does docker run
-CMD ["usage"]
