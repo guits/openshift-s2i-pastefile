@@ -1,3 +1,4 @@
 #!/bin/bash -e
 
-exec uwsgi --socket 0.0.0.0:9000 -w pastefile:app --chdir /opt/openshift/src
+#exec uwsgi --socket 0.0.0.0:9000 -w pastefile:app --chdir /opt/openshift/src
+exec uwsgi --socket 0.0.0.0:9000 -w app:app --chdir /var/www/pastefile/pastefile --uid 33 --gid 33 --env PASTEFILE_SETTINGS=/etc/pastefile.cfg
