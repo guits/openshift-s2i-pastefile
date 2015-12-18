@@ -15,7 +15,7 @@ RUN yum install -y python python-devel python-pip && yum clean all -y && pip ins
 COPY ./.s2i/bin/ /usr/local/s2i
 COPY ./etc/pastefile.cfg /etc/
 
-RUN mkdir /tmp/src && && mkdir /tmp/pastefile && mkdir /tmp/pastefile/files && mkdir /opt/openshift && chmod -R 777 /opt/openshift /tmp/src /tmp/pastefile
+RUN mkdir /tmp/src && && mkdir /tmp/pastefile && mkdir /tmp/pastefile/files && /tmp/pastefile/tmp && mkdir /opt/openshift && chmod -R 777 /opt/openshift /tmp/src /tmp/pastefile
 
 USER 1001
 
