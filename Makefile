@@ -1,5 +1,5 @@
 
-IMAGE_NAME = openshift-s2i-uwsgi-pastefile
+IMAGE_NAME = openshift-s2i-pastefile
 
 build:
 	docker build -t $(IMAGE_NAME) .
