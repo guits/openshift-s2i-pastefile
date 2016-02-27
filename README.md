@@ -1,1 +1,1 @@
-# openshift-s2i-uwsgi-pastefile
+# openshift-s2i-pastefile
