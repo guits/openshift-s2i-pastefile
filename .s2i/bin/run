@@ -1,5 +1,4 @@
 #!/bin/bash -e
 
-# exec uwsgi --socket 0.0.0.0:9000 -w app:app --chdir /opt/openshift/src/pastefile --env PASTEFILE_SETTINGS=/etc/pastefile.cfg
-# exec uwsgi --socket 0.0.0.0:9000 -w pastefile.app:app --chdir /opt/openshift/src/pastefile --uid 33 --gid 33 --env PASTEFILE_SETTINGS=/etc/pastefile.cfg
-exec uwsgi --buffer-size=32768 --socket 0.0.0.0:9000 -w pastefile.app:app --chdir /opt/openshift/src --env PASTEFILE_SETTINGS=/etc/pastefile.cfg
+#exec uwsgi --buffer-size=32768 --socket 0.0.0.0:9000 -w pastefile.app:app --chdir /opt/openshift/src --env PASTEFILE_SETTINGS=/etc/pastefile.cfg
+sleep 30000
